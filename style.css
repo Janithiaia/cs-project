@@ -6,10 +6,15 @@
     font-family: 'spartan', sans-serif;
 }
 
+#logo {
+    height: 60px;
+    width: 60px;
+  }
+
 h1 {
 font-size: 50px;
 line-height: 64px;
-color: #222;
+color: white;
 
 
 }
@@ -29,11 +34,12 @@ h4 {
 h6 {
     font-weight: 700;
     font-size: 12px;
+    margin-top: 10px;
 }
 
 p {
     font-size: 16px; 
-    color: #222;
+    color: gray;
     margin:15px 0 20px 0;
 }
 
@@ -69,108 +75,172 @@ body {
     height: auto; 
   }
   
-#navbar{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-#navbar li{
-    list-style: none;
-    padding: 0 25px ;
-    margin: 0;position: relative;
-}
-
-.fa-magnifying-glass {
-    font-size: 20px; 
-    color: #000; 
-    cursor: pointer;
-}
-
-#navbar li a{
-    text-decoration:none;
+  .navbar {
     font-size: 16px;
-    font-weight: 600;
-    color: #1a1a1a;
-    transition:0.3s ease;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1);
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
+    padding: 0 20px;
+    color: black;
+    transition: 0.3s ease;
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar i:hover,
+  .navbar-light .navbar-nav .nav-link.active,
+  .navbar i.active {
+    color: coral;
+  }
+  
+  .navbar i {
+    font-size: 1.2rem;
+    padding: 0 7px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  /*mobile nav*/
+  .navbar-light .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  
+  #bar {
+    font-size: 1.5rem;
+    padding: 7px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: black;
+  }
+  
+  #bar:hover,
+  #bar.active {
+    color: #fff;
+  }
+  
+  @media only screen and (max-width: 991px) {
+    body > nav > div > button:hover,
+    body > nav > div > button:focus {
+      background-color: coral;
+    }
+    body > nav > div > button:hover #bar,
+    body > nav > div > button:focus #bar {
+      background-color: coral;
+    }
+  
+    #navbarSupportedContent > ul {
+      margin: 1rem;
+      justify-content: flex-end;
+      align-items: flex-end;
+      text-align: right;
+    }
+  }
 
+  .shopNowBtn {
+    font-size: 0.8rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: #1d1d1d;
+    color: aliceblue;
+    padding: 13px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+  }
+  .shopNowBtn:hover {
+    background-color: #3a3833;
+  }
 
-}
- #navbar li a:hover,
- #navbar li a.active {
-    color: #088178;
- }
-
- #navbar li a.active ::after,
- #navbar li a:hover::after{
-    content: "";
-    width: 30%;
-    height: 2px;
-    background: #088178 ;
-    position: absolute;
-    bottom: -4px;
-    left: 20px;
-
-
-
- }
-
- /*home*/
-
- #hero{
+  #home {
     background-image: url("2.jpg");
-    height: 90vh;
     width: 100%;
+    height: 100vh;
     background-size: cover;
-    background-position: top 25% right 0;
-    padding: 0 80px;
+    background-position: top center;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-    text-decoration: solid;
- }
-
- #hero h4{
-    padding-bottom: 15px;
-    color: #E3E6F3;
-    text-decoration: none;
-
-
- }
-
- #hero h2{
-    color: darkgrey ;
-    
-
- }
- #hero h1{
-    color: #088178;
-
-
- }
- #hero button{
-    background-image: url("4.jpg");
-    background-color: transparent;
-    color: #088178;
-    border: 0;
-    padding: 14px 80px 14px 65px;
+    align-items: flex-start;
+    color: #ffffff;
+  }
+  
+  #home span {
+    color: coral;
+  }
+  
+  #new .one img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
     background-repeat: no-repeat;
-    font-weight: 700;
-    font-size: 15px;
- }
+    background-size: cover;
+    position: relative;
+  }
+  
+  #new .one .details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease;
+  }
+  
+  #new .one:hover .details {
+    cursor: pointer;
+    background-color: rgb(245, 178, 178, 0.7);
+  }
+  
+  #new .one .details button {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2a2a2a;
+    background: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 2.5px;
+    transform: translateY(70px);
+    transition: 0.3s ease;
+  }
+  
+  #new .one .details button:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+  
+  #new .one:nth-child(1) .details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+  }
+  #new .one:nth-child(2) .details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #new .one:nth-child(3) .details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+  }
 
- #hero p{
-    color: #E3E6F3;
 
-
- }
 
   
  .small-image {
-    width: 100px;
-    height: auto; 
+    width: 40px;
+    height: 85px; 
 }
 #feature{
     display: flex;
@@ -180,9 +250,9 @@ body {
 }
 
 #feature .fe-box{
-    width: 180px;
+    width: 150px;
     text-align: center;
-    padding: 25px 15px;
+    padding: 15px 15px;
     box-shadow:  20px 20px 34px rgba(0,0,0,0.03) ;
     border: 1px solid #cce7d0;
     border-radius:4px ;
@@ -206,31 +276,34 @@ body {
     line-height: 1;
     border-radius: 4px;
     color: #088178;
-    background-color:#fddde4 ; 
+    background-color:gray ; 
 
 }
 
-#feature .fe-box:nth-child(2) h6{
-    background-color: #cdebbc;
-}
 
-#feature .fe-box:nth-child(3) h6{
-    background-color: #cdebbc;
-}
 
-#feature .fe-box:nth-child(4) h6{
-    background-color: #cdebbc;
-}
+.featuresBtn {
+    font-size: 0.8rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: #1d1d1d;
+    color: aliceblue;
+    padding: 5px 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .featuresBtn:hover {
+    background-color: #3a3833;
+  }
 
-#feature .fe-box:nth-child(5) h6{
-    background-color: #cdebbc;
-}
-
-#feature .fe-box:nth-child(6) h6{
-    background-color: #cdebbc;
-}
 #product1{
     text-align: center;
+}
+#product1 .pro-container{
+    display:flex;
+    justify-content:space-between ;
+    padding: 20px;
 }
 #product1 .pro{
     width: 23%;
@@ -240,7 +313,7 @@ body {
     border-radius: 25px;
     cursor: pointer;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02) ;
-    margin: 15px 0;
+    margin: 15px 20px;
     transition: 0.2s ease;
     position: relative;
 }
